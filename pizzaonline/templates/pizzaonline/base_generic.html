@@ -28,7 +28,11 @@
         <a class="navbar-brand" href="{% url 'index' %}">
             <img src="{% static 'img/logo2.png' %}" style="width:150px; height:80px ;">
         </a>
-        <div><h1>Pizza Steve</h1>  </div>
+        <div>   
+            <a class="nav-link" href="{% url 'index' %}">
+                    <h1>Pizza Steve</h1>         
+            </a>
+        </div>
         <div class="collapse navbar-collapse " id="navright" href="{% url 'index' %}">
             <a class="nav-link" href="{% url 'index' %}">
                 <ion-icon name="pizza"></ion-icon>
@@ -48,6 +52,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'registro' %}">Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'carrito' %}"> Carrito
+                            <ion-icon name="cart"></ion-icon> </a>
                 </li>
             </ul>
         </div>

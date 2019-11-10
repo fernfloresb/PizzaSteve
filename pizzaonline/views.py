@@ -11,3 +11,5 @@ def pizza (request):
     return render (request,'pizzaonline/pizza.html')
 def registro (request):
     return render (request,'pizzaonline/registro.html')
+def carrito (request):
+    return render(request,'pizzaonline/carrito.html')
