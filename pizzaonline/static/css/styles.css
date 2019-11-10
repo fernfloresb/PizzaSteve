@@ -12,14 +12,23 @@ h4{
     color:#9ECA20;
 }
 body{
-    background-image: url("file:///C:/Users/fdogn/Desktop/webpage/img/background.jpg");
+    background-color: #D8F681;
+    background-image: url("img/background.jpg") ;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    
 }
 
 .fondo{
 	background-color:black;
-	opacity:0.8;
+    opacity:0.8;
+}
+
+.fondo2{
+    margin-top: 30%;
 }
 
 .footer-1{
@@ -39,4 +48,8 @@ margin: 40px;
 
 .imgb{
 border: 4px solid black; 
+}
+
+.lregistro{
+color:white;
 }
