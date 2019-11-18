@@ -6,10 +6,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render (request,'pizzaonline/index.html')
+    return render (request,'index.html')
 def pizza (request):
-    return render (request,'pizzaonline/pizza.html')
+    pizzas = Pizza.objects.all()
+
+    return render (request,'pizza.html', {'pizzas': pizzas})
 def registro (request):
-    return render (request,'pizzaonline/registro.html')
+    return render (request,'registro.html')
 def carrito (request):
-    return render(request,'pizzaonline/carrito.html')
+    return render(request,'carrito.html')

@@ -1,0 +1,42 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <nav>
+
+    <h1 class="fondo"> Nuestras pizzas </h1>
+<p>soy un catalogo de pizzas malotas </p>
+
+<div class="container">
+
+        <div class="container">
+            <div class="row">
+            	{% for pizza in pizzas %}
+                <div class="col-lg-4 mb-4">
+                    
+
+                    <div class="card h-100">
+                        <h4 class="card-header">{{pizza.pizzaName}}</h4>
+                        <div class="card-body">
+                            <img style="height:300px; width:300px" src="{{pizza.img.url}}" alt="">
+                            	{% for ingredient in pizza.ingredient.all %}{{ingredient}} {% endfor %}
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary"><b>${{pizza.price}}</b></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>    
+    </div>
+    
+    
+    
+    <!-- /contenido-->
+
+
+
+</nav>
+</body>
+{% endblock %}

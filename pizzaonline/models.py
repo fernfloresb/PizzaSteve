@@ -4,6 +4,7 @@ import uuid
 
 # Create your models here.
 
+
 #Clase Ingredientes
 class Ingredients (models.Model):
     ingredientName = models.CharField(max_length=200)
@@ -23,6 +24,7 @@ class Size (models.Model):
 class Pizza (models.Model):
     pizzaName = models.CharField(max_length=200)
     ingredient = models.ManyToManyField(Ingredients)
+    img = models.ImageField(upload_to='img')
     size = models.ManyToManyField(Size)
     price = models.IntegerField(default=0)
     
